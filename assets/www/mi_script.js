@@ -17,8 +17,16 @@
 			$("#tiempos").append(html);
 		}
 		total++;
+		var minutos = hora.getMinutes().toString();
+		var segundos = hora.getSeconds().toString();
+		if(minutos.length<2) {
+			minutos = "0" + minutos;
+		}
+		if(segundos.length<2) {
+			segundos = "0" + segundos;
+		}
 		//Construyo el nuevo elemento para la lista
-		var html = "<li data-theme='c' class='ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-bottom ui-btn-up-c mia'><div class='ui-btn-inner ui-li'><div class='ui-btn-text'><a class='ui-link-inherit'>Hora "+ total + ": " + hora.getHours() + ":" + hora.getMinutes() + ":" + hora.getSeconds() + "</div></div></a></li>"
+		var html = "<li data-theme='c' class='ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-bottom ui-btn-up-c mia'><div class='ui-btn-inner ui-li'><div class='ui-btn-text'><a class='ui-link-inherit'>Hora "+ total + ": " + hora.getHours() + ":" + minutos + ":" + segundos + "</div></div></a></li>"
 		$("#tiempos").append(html);
 	}
 
