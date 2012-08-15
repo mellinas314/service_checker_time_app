@@ -1,10 +1,36 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Cordova</title>
-<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-</head>
-<body>
-<h1>Hello World 2</h1>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="jquery-1.8.0.min.js"> </script>
+        <script src="jquery.mobile-1.1.1.js"> </script>
+        <script src="my.js"></script>
+        <script src="mi_script.js"></script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="b" data-role="header">
+                <h3>
+                    Time Checker
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <input type="submit" value="Añadir tiempo" id="add_time" />
+                <ul data-role="listview" data-divider-theme="e" data-inset="true" id="tiempos">
+                </ul>
+                <div id="reset" style="display:none">
+                    <input type="submit" value="Reiniciar tiempos"/>
+                </div>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
 </html>
